@@ -1,0 +1,8 @@
+language: python
+python:
+  - "3.6"
+install:
+  - pip install -r requirements.txt
+script:
+  - pylint --rcfile .pylintrc day1-tyranny-rocket-equation
+  - pytest day1-tyranny-rocket-equation
