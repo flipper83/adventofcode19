@@ -10,8 +10,8 @@ class FuelMeasurer:
         fuel = int(mass / 3) - 2
         if fuel <= 0:
             return total
-        else:
-            return self.measure(fuel, total + fuel)
+
+        return self.measure(fuel, total + fuel)
 
     def measure_all(self, masses: List[int]) -> int:
         return functools.reduce(lambda total, mass: total + self.measure(mass),
